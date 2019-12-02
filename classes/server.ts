@@ -31,10 +31,14 @@ export default class Server {
         console.log('Escuchando Sockets');
         this.io.on('connection', cliente => {
             console.log('nuevo Cliente');
+
+            cliente.on('disconnect', () => {
+                console.log('Cliente desconectado');
+            })
         })
     }
 
     start( callback:any ) {
-        this.app.listen( this.port, callback);
+        this.httpServer.listen( this.port, callback);
     }
 }
