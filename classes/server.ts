@@ -33,9 +33,9 @@ export default class Server {
         console.log('Escuchando Sockets');
         this.io.on('connection', cliente => {
             
-            console.log('nuevo Cliente', cliente);
+            console.log('nuevo Cliente');
             // Mensajes
-            socket.mensaje(cliente);
+            socket.mensaje(cliente, this.io);
             // Desconectar
             socket.desconectar(cliente);
 

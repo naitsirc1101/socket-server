@@ -1,5 +1,4 @@
 import Server from './classes/server';
-import { SERVER_PORT } from './global/environment';
 import { router } from './routes/router';
 import bodyParser = require('body-parser');
 import cors from 'cors';

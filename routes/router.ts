@@ -8,6 +8,7 @@ router.get('/mensajes', (req: Request, res: Response) => {
         ok: true,
         mensaje: 'Todo nice!'
     })
+    // console.log(req.body, "body")
 })
 
 router.post('/mensajes', (req: Request, res: Response) => {
